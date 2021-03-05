@@ -4,14 +4,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".activities.MainActivity">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/main_roms_rv"
-        android:layout_width="0dp"
+    <FrameLayout
+        android:id="@+id/frame_main"
+        android:layout_width="match_parent"
         android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/сhipNavigationBar_main"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+    </FrameLayout>
+
+    <com.ismaeldivita.chipnavigation.ChipNavigationBar
+        android:id="@+id/сhipNavigationBar_main"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:cnb_menuResource="@menu/main_menu"
+        app:cnb_orientationMode="horizontal"
+        app:cnb_radius="32dp"
+        app:cnb_iconSize="24dp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
